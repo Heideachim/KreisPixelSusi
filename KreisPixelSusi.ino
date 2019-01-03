@@ -23,11 +23,11 @@ void setup() {
   pixels.begin(); // This initializes the NeoPixel library.
 }
 
-// ein die farbe wechselndes würmchen im kreis saußen lassen:
+// ein die farbe wechselndes würmchen im kreis sausen lassen:
 void loop() {
   const int LAENGE = 6;               // wie viele LEDs soll das würmchen lang sein.
   for (float farbe = 0.0; farbe < 2*PI; farbe += 0.3) {   // farbe durchwechseln
-    for (int start = 0; start < NUMPIXELS; start++) {     // an welcher LED startet das würmchen. bewirkt, dass das würmchen im kreis saußt
+    for (int start = 0; start < NUMPIXELS; start++) {     // an welcher LED startet das würmchen. bewirkt, dass das würmchen im kreis saust
       for (int lednr = 0; lednr < LAENGE; lednr++){       // das würmchen besteht aus LAENGE LEDs
         // farbe der aktuellen LED: über die phasenverschiebung innerhalb der sin-funktion werden rot, grün und blau gemischt:
         unsigned int R = (float)lednr * (sin(farbe + 0.0/3.0*2.0*PI)+1.0)/2.0 * LOGMAX / LAENGE;
